@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .video-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            width: 80%;
+            max-width: 720px;
+            text-align: center;
+        }
+
+        .video-container h1 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .controls {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #003f7f;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <h1>Roteiro de inscrição</h1>
+        <video id="videoPlayer" controls>
+            <source src="anexo03.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button onclick="playVideo()">▶ Play</button>
+            <button onclick="pauseVideo()">⏸ Pause</button>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+    </script>
+</body>
+</html>
