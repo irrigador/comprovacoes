@@ -1,94 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
+    <title>Ficha de Inscrição</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-        .video-container {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 16px;
-            width: 80%;
-            max-width: 720px;
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
             text-align: center;
         }
 
-        .video-container h1 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            padding: 0 10px;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .comprovacoes {
+            font-size: 14px;
+        }
+
+        .comprovacoes a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 400;
+        }
+
+        .comprovacoes a:hover {
+            text-decoration: underline;
         }
 
         video {
-            width: 100%;
+            max-width: 100%;
             border-radius: 8px;
-        }
-
-        .controls {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s, transform 0.2s;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        button:active {
-            background-color: #003f7f;
-            transform: scale(1);
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <h1>Roteiro de inscrição</h1>
-        <video id="videoPlayer" controls>
-            <source src="anexo03.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="controls">
-            <button onclick="playVideo()">▶ Play</button>
-            <button onclick="pauseVideo()">⏸ Pause</button>
+    <div class="header">
+        <h1>Comprovação</h1>
+        <div class="comprovacoes">
+            <a href="#">Comprovações</a>
         </div>
     </div>
-
-    <script>
-        const video = document.getElementById('videoPlayer');
-
-        function playVideo() {
-            video.play();
-        }
-
-        function pauseVideo() {
-            video.pause();
-        }
-    </script>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0hJSlhC6foU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
