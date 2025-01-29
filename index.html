@@ -44,10 +44,24 @@
             text-decoration: underline;
         }
 
-        video {
+        iframe {
             max-width: 100%;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .instagram-posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .instagram-posts iframe {
+            width: 320px;
+            height: 400px;
+            border: none;
         }
     </style>
 </head>
@@ -58,6 +72,15 @@
             <a href="#">Comprovações</a>
         </div>
     </div>
+
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0hJSlhC6foU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="instagram-posts">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDr12h3OYiG/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DB1AJtIOwCt/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CsqhrCjuxHq/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
